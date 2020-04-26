@@ -23,7 +23,14 @@ We set up package.json so that `npm test` will run our tests.
 },
 ```
 
-The mocha configuration file `.mocharc.jsonc` has been set up to find our tests and make use of ts-node. 
+The mocha configuration file `.mocharc.jsonc` has been set up to find our tests and run `test/runners/mocha/init.js`.
+
+The project compiles typescript into something other than commonjs modules. Node doesn't play nicely with other formats, so we've added a separate `tsconfig.json` just for mocha, which `init.js` feeds into ts-node.
+
+Without that separate tsconfig, we'd get an error like this:
+```
+SyntaxError: Cannot use import statement outside a module
+```
 
 Running `npm test` should output something like this:
 ```

@@ -1,6 +1,12 @@
 // typescript config for the project
 {
     "compilerOptions": {
-        "module": "CommonJs"
+
+        // Suppose we have a project that doesn't produce commonjs modules.
+        // Mocha runs in node (which uses commonjs). So we have to override this somehow.
+        //
+        // I've done this with test/runner/mocha/tsconfig.json
+        //   (which I've fed into ts-node via test/runner/mocha/init.js).
+        "module": "ES6"
     }
 }
