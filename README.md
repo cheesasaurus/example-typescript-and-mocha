@@ -19,11 +19,13 @@ We've added a unit test for `simpleGreeting` in `test/unit/greetings.spec.ts`
 We set up package.json so that `npm test` will run our tests.
 ```
 "scripts": {
-    "test": "mocha -r ts-node/register test/**/*.spec.ts"
+    "test": "mocha"
 },
 ```
 
-Running `npm test` should now output something like this:
+The mocha configuration file `.mocharc.jsonc` has been set up to find our tests and make use of ts-node. 
+
+Running `npm test` should output something like this:
 ```
   simpleGreeting
     √ should say hello
