@@ -19,7 +19,7 @@ We've added a unit test for `simpleGreeting` in `test/unit/greetings.spec.ts`
 We set up package.json so that `npm test` will run our tests.
 ```
 "scripts": {
-    "test": "mocha"
+    "test": "mocha --config test/runners/mocha/.mocharc.jsonc"
 },
 ```
 

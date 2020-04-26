@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "example of how to test typescript with mocha",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --config test/runners/mocha/.mocharc.jsonc"
   },
   "author": "Nicholas Toby",
   "license": "ISC",
