@@ -1,0 +1,6 @@
+// typescript config for the project
+{
+    "compilerOptions": {
+        "module": "CommonJs"
+    }
+}
