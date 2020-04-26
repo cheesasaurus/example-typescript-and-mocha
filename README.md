@@ -10,3 +10,24 @@ We've installed Mocha and Chai, as well as their types.\
 
 We've also installed ts-node, which will be used to compile typescript on-the-fly.\
 `npm install ts-node`
+
+
+## Adding tests and running them
+
+We've added a unit test for `simpleGreeting` in `test/unit/greetings.spec.ts`
+
+We set up package.json so that `npm test` will run our tests.
+```
+"scripts": {
+    "test": "mocha -r ts-node/register test/**/*.spec.ts"
+},
+```
+
+Running `npm test` should now output something like this:
+```
+  simpleGreeting
+    √ should say hello
+
+
+  1 passing (8ms)
+```
