@@ -40,3 +40,15 @@ Running `npm test` should output something like this:
 
   1 passing (8ms)
 ```
+
+## Mocking
+
+We installed ts-mockito.\
+`npm install --save-dev ts-mockito`
+
+Some contrived things have been added to `src/` to be used as an example for mocking.
+- targetedGreeting
+- INamed
+- MyComplicatedDomainModel
+
+We wrote a unit test for `targetedGreeting` in `greetings.spec.ts` and used ts-mockito to mock `MyComplicatedDomainModel`.
